@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Responsivo</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media-query.css">
 </head>
-<body>
+
+<body onresize="mudouTamanho()">
     <header>
         <h1>Meu Site</h1>
         <span onclick="clickMenu()" id="burguer" class="material-icons">menu</span>
@@ -25,24 +28,47 @@
         <article>
             <h2>Testando Media Queries</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus saepe eaque ipsa in pariatur reiciendis sit deleniti nam cumque debitis vero, autem iure minus incidunt sapiente maiores blanditiis inventore non. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quasi, non ea delectus mollitia dolorum laborum! Qui voluptatum est nobis fugit, asperiores repellendus et impedit officiis non. Provident, ex ad.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus saepe eaque ipsa in pariatur
+                reiciendis sit deleniti nam cumque debitis vero, autem iure minus incidunt sapiente maiores blanditiis
+                inventore non. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus quasi, non ea
+                delectus mollitia dolorum laborum! Qui voluptatum est nobis fugit, asperiores repellendus et impedit
+                officiis non. Provident, ex ad.
             </p>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi soluta, amet officiis impedit dignissimos autem eaque? Voluptatem nisi perferendis totam eaque, voluptatum officia odio nihil quos voluptas vitae, quo magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repudiandae iusto dicta assumenda facere, placeat accusantium perferendis non minima optio repellat asperiores! Dolorem minima perspiciatis et soluta, hic eveniet facilis!
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi soluta, amet officiis impedit
+                dignissimos autem eaque? Voluptatem nisi perferendis totam eaque, voluptatum officia odio nihil quos
+                voluptas vitae, quo magnam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+                repudiandae iusto dicta assumenda facere, placeat accusantium perferendis non minima optio repellat
+                asperiores! Dolorem minima perspiciatis et soluta, hic eveniet facilis!
             </p>
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum reiciendis alias modi suscipit, quo iste tempora? Id sit facere, vero magnam ipsa ratione est. Laboriosam facere a at odio officia! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis odio, incidunt maxime cupiditate debitis fugiat autem molestiae velit cumque sequi quasi obcaecati consequatur nulla voluptas sunt quaerat est veritatis ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolorem eveniet veritatis, voluptatibus quaerat nesciunt alias eum cupiditate, autem dignissimos at commodi! Deserunt voluptates mollitia repudiandae perferendis reprehenderit, molestiae et!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum reiciendis alias modi suscipit, quo iste
+                tempora? Id sit facere, vero magnam ipsa ratione est. Laboriosam facere a at odio officia! Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Facilis odio, incidunt maxime cupiditate debitis fugiat
+                autem molestiae velit cumque sequi quasi obcaecati consequatur nulla voluptas sunt quaerat est veritatis
+                ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolorem eveniet veritatis,
+                voluptatibus quaerat nesciunt alias eum cupiditate, autem dignissimos at commodi! Deserunt voluptates
+                mollitia repudiandae perferendis reprehenderit, molestiae et!
             </p>
         </article>
     </main>
     <script>
+        function mudouTamanho() {
+            if(window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+        }
+        
         function clickMenu() {
             if (itens.style.display == 'block') {
-            itens.style.display = 'none'
-        } else {
-            itens.style.display = 'block'
-        }
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
         }
     </script>
 </body>
+
 </html>
